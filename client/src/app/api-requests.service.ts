@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class ApiRequestsService {
 
-  apiEndpoint:string = 'http://localhost:4200/api/';
+  // private apiEndpoint = 'http://localhost:4200/api/';
 
   /**
    * Examples
@@ -19,7 +19,8 @@ export class ApiRequestsService {
   // filterVisitEndpoint:string = 'filter-visits/';
   // createHostEndpoint:string = '/register-host';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   /**
    * Examples
