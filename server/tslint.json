@@ -1,9 +1,23 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended"
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [
+      true,
+      "single",
+      "double",
+      "avoid-escape",
+      "avoid-template"
     ],
-    "jsRules": {},
-    "rules": {},
-    "rulesDirectory": []
+    "ordered-imports": false,
+    "no-console": [false, "log", "error"],
+    "jsdoc-format": false,
+    "object-literal-sort-keys": false,
+    "interface-name": false,
+    "no-var-requires": false
+  },
+  "rulesDirectory": []
 }

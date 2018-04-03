@@ -2,22 +2,22 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as bodyParser from 'body-parser';
 
-let app = express();
-const port = process.env.PORT || 3000
+const app = express();
+const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/Tododb', {
+mongoose.connect('mongodb://localhost/boilerplateDb', {
     useMongoClient: true,
-    promiseLibrary: global.Promise
+    promiseLibrary: global.Promise,
 });
 
 app.use(bodyParser.json({limit: '5mb'}));
 app.use(bodyParser.urlencoded({extended: true, limit: '5mb'}));
 
-var routes = require('./api/routes/apiRoutes'); //importing route
-routes(app); //register the route
+const routes = require('./api/routes/apiRoutes');
+routes(app);
 
-app.use(function (req, res) {
-    res.status(404).send({url: req.originalUrl + ' not found'})
+app.use((req, res) => {
+    res.status(404).send({url: req.originalUrl + ' not found'});
 });
 
 app.listen(port);

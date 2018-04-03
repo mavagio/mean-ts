@@ -7,12 +7,12 @@ const nodemailer = require('nodemailer');
 
 export default class MailService {
 
-    static transporter: any = nodemailer.createTransport({
+    public static transporter: any = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: '******',// TODO add the email as parameter variable
-            pass: '******' // TODO add password to email as parameter variable
-        }
+            user: '******', // TODO add the email as parameter variable
+            pass: '******', // TODO add password to email as parameter variable
+        },
     });
 
     /**
@@ -27,8 +27,8 @@ export default class MailService {
      *           };
      *
      */
-    static sendMail(mailOptions: Object) {
-        this.transporter.sendMail(mailOptions, function (error: any, info: any) {
+    public static sendMail(mailOptions: object) {
+        this.transporter.sendMail(mailOptions, (error: any, info: any) => {
             if (error) {
                 console.log(error);
             } else {
@@ -36,6 +36,4 @@ export default class MailService {
             }
         });
     }
-
 }
-
