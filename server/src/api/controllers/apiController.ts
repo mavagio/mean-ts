@@ -15,7 +15,6 @@ exports.register_a_visit = (req: any, res: any) => {
     console.log('registering');
     visitCtrl.insert(req, res);
 };
-
 exports.get_all_visits = (req: any, res: any) => {
     visitCtrl.getAll(req, res);
 };
@@ -25,11 +24,9 @@ exports.remove_a_visit = (req: any, res: any) => {
 exports.remove_all_visits = (req: any, res: any) => {
     visitCtrl.deleteAll(req, res);
 };
-
 exports.sort_date = (req: any, res: any) => {
     visitCtrl.getDate(req, res);
 };
-
 exports.filter_visits = (req: any, res: any) => {
     visitCtrl.filterVisits(req, res);
 };
