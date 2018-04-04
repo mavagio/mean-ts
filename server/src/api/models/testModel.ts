@@ -16,6 +16,6 @@ const TestSchema: Schema = new Schema({
 export interface ITestModel extends ITest, Document {
 }
 
-const TestModel = mongoose.model<ITestModel>('Test',TestSchema);
+const TestModel = mongoose.model<ITestModel>('Test', TestSchema);
 
 export default TestModel;
