@@ -1,5 +1,5 @@
 import mongoose = require('mongoose');
-import {Schema, Model, Document} from 'mongoose';
+import {Schema, Document} from 'mongoose';
 
 export interface ITest {
     name: string;
