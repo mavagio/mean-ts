@@ -15,27 +15,6 @@ export default class Base<T extends any> {
         });
     }
 
-    public getDate = (req: any, res: any) => {
-        const x = this.model.find({}).sort({date: this.sortDir}).exec((err: any, docs: any) => {
-            if (err) {
-                return console.log(err);
-            }
-            if (this.sortDir === 1) {
-                this.sortDir = -1;
-            } else {
-                this.sortDir = 1;
-            }
-            res.json(docs);
-        });
-    }
-
-    public filterVisits = (req: any, res: any) => {
-        console.log(typeof(req.params.filterDate));
-        this.model.find({date: {$gte: new Date(req.params.filterDate)}}, (err: any, docs: any) => {
-            res.json(docs);
-        });
-    }
-
     public insert = (req: any, res: any) => {
         const obj = new this.model(req.body);
         obj.save((err: any, item: any) => {
