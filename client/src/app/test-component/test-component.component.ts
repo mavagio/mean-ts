@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ApiRequestsService} from '../api-requests.service';
 
 @Component({
   selector: 'app-test-component',
@@ -8,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class TestComponentComponent implements OnInit {
 
   public testValues: any = {};
-  constructor() { }
+  public testEntries: any = [];
 
-  ngOnInit() {
+  constructor(private apiRequestsService: ApiRequestsService) {
   }
 
-  public onSubmit (): void {
-    console.log(this.testValues);
+  ngOnInit() {
+
+  }
+
+  public getTests(): void {
+    this.apiRequestsService.getTests().subscribe(response => this.testEntries = response);
+  }
+
+  public onSubmit(): void {
+    this.apiRequestsService.postTest(this.testValues).subscribe(response => alert('Successfully added'));
   }
 }
