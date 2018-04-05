@@ -2,10 +2,13 @@ import * as express from 'express';
 import * as mongoose from 'mongoose';
 import * as bodyParser from 'body-parser';
 
+const dotenv = require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-mongoose.connect('mongodb://localhost/boilerplateDb', {
+const db: string = String((process.env.NODE_ENV === 'production') ? process.env.PROD_DB : process.env.DEV_DB);
+
+mongoose.connect(db, {
     useMongoClient: true,
     promiseLibrary: global.Promise,
 });
