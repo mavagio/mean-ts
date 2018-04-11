@@ -15,4 +15,3 @@ exports.test_post = (req: any, res: any) => {
 exports.test_delete = (req: any, res: any) => {
     testCtrl.delete(req, res);
 };
-
