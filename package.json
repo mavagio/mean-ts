@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run installdependencies && npm run buildclient && cd server/ && npm run herokustart",
-    "installdependencies": "cd server && npm i && cd ../client && npm i && cd ../",
+    "start": "npm run installdependencies && npm run buildclient && cd server && npm run herokustart",
+    "installdependencies": "cd server && npm install && cd ../client && npm install && cd ../",
     "buildclient": "cd client && npm run build && cd ../"
   },
   "repository": {
