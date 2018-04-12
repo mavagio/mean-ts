@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd server/ && npm run herokustart"
+    "start": "npm run installdependencies && npm run buildclient && cd server/ && npm run herokustart",
+    "installdependencies": "cd server && npm i && cd ../client && npm i && cd ../",
+    "buildclient": "cd client && npm run build && cd ../"
   },
   "repository": {
     "type": "git",
