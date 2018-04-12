@@ -1,0 +1,22 @@
+{
+  "name": "mean-ts",
+  "version": "1.0.0",
+  "description": "- MongoDB - Angular 4 - Express - Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinavagyan/mean-ts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinavagyan/mean-ts/issues"
+  },
+  "engines": {
+    "node": "9.5.0"
+  },
+  "homepage": "https://github.com/martinavagyan/mean-ts#readme"
+}
