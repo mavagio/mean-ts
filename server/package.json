@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && node src/server.js",
     "cloudstart": "tsc && NODE_ENV=production node src/server.js",
-    "herokustart": "npm i && NODE_ENV=production ./node_modules/.bin/ts-node src/server.ts",
+    "herokustart": "npm install && tsc &&  node src/server.js",
     "dev": "nodemon --exec npm start",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "test": "./node_modules/.bin/mocha --reporter spec"
