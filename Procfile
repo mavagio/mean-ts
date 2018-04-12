@@ -1,1 +1,1 @@
-web: ./server npm run cloudstart
+web: ./server npm run eecloudstart
