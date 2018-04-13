@@ -34,6 +34,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.2.0",
+    "ts-node": "~3.2.0"
   },
   "devDependencies": {
     "jasmine-core": "~2.6.2",
@@ -44,7 +45,6 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "ts-node": "~3.2.0",
-    "tslint": "~5.7.0",
+    "tslint": "~5.7.0"
   }
 }
