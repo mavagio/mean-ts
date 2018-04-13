@@ -4,7 +4,7 @@
   "description": "- MongoDB - Angular 4 - Express - Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd server && npm run test && cd ../client && npm run lint && cd ../",
     "start": "npm run installdependencies && cd server && npm run herokustart",
     "installdependencies": "npm run installserver",
     "buildclient": "cd client && npm run build && cd ../",
