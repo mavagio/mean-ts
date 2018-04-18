@@ -1,4 +1,4 @@
-#How to run locally
+# How to run locally
 
 Prerequisites
 ---------------
