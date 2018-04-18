@@ -32,7 +32,7 @@ This will create the database locally. By running the server with the command:
 npm run cloudstart
 ```
 The server will run in production environment.
-#Demo
+# Demo
 - https://mean-deploy.herokuapp.com/
 
 # MEAN Stack with TypeScript
