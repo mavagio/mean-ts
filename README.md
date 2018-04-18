@@ -12,14 +12,18 @@ Run the code
 ```
 npm run installdependencies
 ```
-- Create .env file in server folder, copy the following lines and modify the PROD_DB parameter according to your could mongoDB provider:
+- Create .env file in server folder.
+- Copy the following lines to .env file.
 ```
 PORT=3000
 DEV_DB='mongodb://localhost/boilerplateDb'
 NODE_ENV='development'
+```
+- Add the following to .env file if you want to run MongoDB with cloud provider (e.g. Mlab):
+```
 PROD_DB={{the URI provided by mongoDB could providers, e.g. Mlab}}
 ```
-- Run the application by starting the client and server separetly:
+- Run the application by starting the client and server separately:
 ```
 cd server; npm start
 ```
