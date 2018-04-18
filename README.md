@@ -1,3 +1,40 @@
+#How to run locally
+
+Prerequisites
+---------------
+Make sure to have the following installed on your machine:
+- mongoDB
+- Node
+
+Run the code
+---------------
+- Install dependencies. From root directory run:
+```
+npm run installdependencies
+```
+- Create .env file in server folder, copy the following lines and modify the PROD_DB parameter according to your could mongoDB provider:
+```
+PORT=3000
+DEV_DB='mongodb://localhost/boilerplateDb'
+NODE_ENV='development'
+PROD_DB={{the URI provided by mongoDB could providers, e.g. Mlab}}
+```
+- Run the application by starting the client and server separetly:
+```
+cd server; npm start
+```
+```
+cd client; npm start
+```
+
+This will create the database locally. By running the server with the command:
+```
+npm run cloudstart
+```
+The server will run in production environment.
+#Demo
+- https://mean-deploy.herokuapp.com/
+
 # MEAN Stack with TypeScript
 - MongoDB
 - Angular 4

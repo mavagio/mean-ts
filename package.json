@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cd server && npm run test && cd ../client && npm run lint && cd ../",
-    "start": "npm run installdependencies && cd server && npm run herokustart",
-    "installdependencies": "npm run installserver",
+    "start": "npm run installserver && cd server && npm run herokustart",
+    "installdependencies": "npm run installserver && npm run installclient",
     "buildclient": "cd client && npm run build && cd ../",
     "installclient": "cd client && npm i && cd ../",
     "installserver": "cd server && npm install && cd ../"
